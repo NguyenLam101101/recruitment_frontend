@@ -1,0 +1,73 @@
+.recruitment-search {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px 1px lightgray;
+    border-radius: 5px;
+    font-family: Segoe UI;
+    color: #555555;
+    background-color: white;
+    font-size: 15px;
+}
+
+.recruitment-search .recruitment-search-title {
+    height: 40px;
+    padding: 5px 20px 5px 20px;
+    background-color: darkslategray;
+    font-size: 18px;
+    font-weight: 600;
+    color:  white;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid darkgray;
+}
+
+.recruitment-search .recruitment-search-box {
+    padding: 5px 20px 10px 20px;
+    position: relative;
+}
+
+.recruitment-search select,
+.recruitment-search input,
+.recruitment-search .multi-objects-input .multi-objects-input-box {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: snow;
+} 
+
+
+.recruitment-search #recruitment-search-experience,
+.recruitment-search .multi-objects-input {
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+}
+
+#recruitment-search-provinces,
+#recruitment-search-domains{
+    float: left;
+    margin-right: 5%;
+}
+
+.recruitment-search .recruitment-search-button{
+    padding: 5px 20px 5px 20px;
+    background-color: lavenderblush;
+    text-align: right;
+}
+
+.recruitment-search .recruitment-search-button button{
+    width: fit-content;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #008C5E;
+    color: white;
+    border: none;
+}
+
+.recruitment-search button i{
+    margin-right: 5px;
+}
+
+

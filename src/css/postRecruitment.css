@@ -1,0 +1,193 @@
+.post-recruitment{
+    min-width: 650px;
+    width: 60%;
+    margin: 0 auto 0 auto;
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    position: relative;
+    background-color: white;
+    padding: 10px 10px 10px 20px;
+}
+
+.post-recruitment form{
+    padding-bottom: 30px;
+}
+
+.post-recruitment-main-information-title,
+.post-recruitment-detail-information-title{
+    margin-bottom: 15px;
+    color: #007F54;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.post-recruitment .post-recruitment-privacy{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    /* border-bottom: 1.5px solid darkgray; */
+}
+
+.post-recruitment .post-recruitment-privacy select{
+    margin-left: 20px;
+}
+
+#post-recruitment-banner{
+    width: 100%;
+}
+
+.post-recruitment-main-information,
+.post-recruitment-detail-information{
+    padding: 15px;
+    border: 1.5px solid lightgray;
+    margin-top: 20px;
+}
+
+.post-recruitment input, 
+.post-recruitment select,
+.multi-objects-input .multi-objects-input-box {
+    height: 35px;
+    border: none;
+    /* border-bottom: 1px inset #007F54; */
+    border: 1px solid var(--light-green-color);
+    /* background: whitesmoke; */
+    border-radius: 5px;
+}
+
+
+.post-recruitment .post-recruitment-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.post-recruitment .post-recruitment-item,
+#post-recruitment-skills,
+#post-recruitment-domains{
+    margin-bottom: 15px;
+}
+
+.post-recruitment .post-recruitment-item{
+    width: 47.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-recruitment .post-recruitment-item--address{
+    width: 100%;
+}
+
+.post-recruitment .post-recruitment-address-input-container{
+    display: flex;
+}
+
+.post-recruitment .post-recruitment-address-input-container select{
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.post-recruitment .post-recruitment-address-input-container input{
+    flex: 1;
+}
+
+.post-recruitment .post-recruitment-item--position,
+.post-recruitment .post-recruitment-item--experience,
+.post-recruitment .post-recruitment-item--wage{
+    float: left;
+    margin-right: 5%;
+}
+
+.post-recruitment .post-recruitment-wage-input-container{
+    position: relative;
+    display: flex;
+}
+
+.post-recruitment .post-recruitment-wage-input{
+    width: 94%;
+    border-right: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px 0 0 5px;
+}
+
+.post-recruitment .post-recruitment-wage-currency{
+    width: 25%;
+    border-radius: 0 5px 5px 0;
+    margin-left: auto;
+}
+
+.post-recruitment .post-recruitment-wage-input:focus{
+    outline: none;
+}
+
+.post-recruitment .post-recruitment-wage-selection{
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    /* border-radius: 5px 0 0 5px; */
+}
+
+.post-recruitment .post-recruitment-date span{
+    margin-left: 2.5%;
+    display: inline-block;
+    transform: translate(-50%, 0);
+}
+
+.post-recruitment .post-recruitment-currency{
+    width: 15%;
+}
+
+.post-recruitment .post-recruitment-description textarea, 
+.post-recruitment .post-recruitment-requirement textarea, 
+.post-recruitment .post-recruitment-interest textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+    overflow: auto;
+    border: none;
+    border: 1px solid var(--light-green-color);
+    background: snow;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.post-recruitment .post-recruitment-description textarea:focus, 
+.post-recruitment .post-recruitment-requirement textarea:focus, 
+.post-recruitment .post-recruitment-interest textarea:focus{
+    height: 250px;
+}
+
+.post-recruitment .post-recruitment-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-recruitment .post-recruitment-button button {
+    border: none;
+    width: fit-content;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 17px;
+    border-radius: 15px;
+}
+
+.post-recruitment .post-recruitment-button button + button {
+    margin-left: 30px;
+}
+
+.post-recruitment .post-recruitment-button-post {
+    background: #006241;
+    color: white;
+}
+

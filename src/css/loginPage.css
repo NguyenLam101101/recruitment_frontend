@@ -1,0 +1,9 @@
+.login-page{
+    display: flex;
+    height: 100vh;
+}
+
+.login-page .login{
+    width: 35%;
+    margin: auto;
+}

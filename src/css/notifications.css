@@ -1,0 +1,82 @@
+.notification{
+    position: relative;
+}
+
+.notification > i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.notRead-notification-count{
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    right: -8px;
+    top: 3px;
+    height: 15px;
+    line-height: 15px;
+    width: 15px;
+    font-size: 9px;
+    text-align: center;
+}
+
+.notification-container{
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px lightgray;
+    top: calc(100% - 5px);
+    right: 0;
+    font-size: 13px;
+    width: 300px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.notification-option{
+    color: #333;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    line-height: normal;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.notification-option:first-of-type{
+    border-radius: 5px 5px 0 0;
+}
+
+.notification-option:last-of-type{
+    border-radius: 0 0 5px 5px;
+}
+
+.notification-option.notRead{
+    background-color: #eee;
+}
+
+.notification-option i.application{
+    color: var(--light-green-color);
+}
+
+.notification-option i.approval{
+    color: #008C5E;
+}
+
+.notification-option i.replyMail{
+    color: var(--blue-color);
+}
+
+.notification-message,
+.notification-time{
+    height: fit-content;
+    line-height: normal;
+}
+
+.notification-time{
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    margin-top: 3px;
+}

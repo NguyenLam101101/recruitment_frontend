@@ -1,0 +1,51 @@
+.employer-application-management-page-content{
+    padding: 80px 30px;
+    display: flex;
+}
+
+
+.employer-application-management-page-cv-filter-container{
+    width: 20%;
+    margin-right: 20px;
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 2px lightgray;
+    height: fit-content;
+}
+
+.employer-application-management-page-cv-filter{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.employer-application-management-page-cv-filter .multi-objects-input-box{
+    font-size: 11px;
+    height: 30px;
+    background-color: #fff;
+}
+
+#cv-filter-experience{
+    display: flex;
+    flex-direction: column;
+}
+
+#cv-filter-experience input{
+    height: 30px;
+    border: 1px solid var(--light-green-color);
+    border-radius: 5px;
+}
+
+.cv-filter-button{
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.cv-filter-button button{
+    background-color: var(--blue-color);
+    padding: 0 10px;
+    color: white;
+}

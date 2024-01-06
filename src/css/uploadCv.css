@@ -1,0 +1,115 @@
+.upload-cv{
+    margin: auto;
+    box-shadow: 0 0 2px 2px lightgray;
+    font-family: Calibri;
+    color: #444444;
+    font-size: 16px;
+    position: relative;
+    background-color: #fff;
+}
+
+.upload-cv form{
+    padding: 20px 20px 5px 20px;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.upload-cv input,
+.upload-cv select {
+    height: 30px;
+    border: 1px solid #008C5E;
+}
+
+.upload-cv .upload-cv-name,
+.upload-cv .upload-cv-content,
+.upload-cv .upload-cv-privacy,
+.upload-cv .multi-objects-input,
+.upload-cv .upload-cv-experience{
+    margin-bottom: 15px;
+}
+
+.upload-cv .upload-cv-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-cv .upload-cv-content label{
+    margin-right: 20px;
+}
+
+.upload-cv .upload-cv-privacy{
+    display: flex;
+    flex-direction: row;
+}
+
+.upload-cv .upload-cv-privacy input{
+    height: 25px;
+    margin: 0 10px 0 30px;
+}
+
+.upload-cv .upload-cv-public-privacy label,
+.upload-cv .upload-cv-private-privacy label{
+    position: relative;
+    top: -7px;
+}
+
+
+.upload-cv .upload-cv-extra-information{
+    padding-top: 20px;
+    border-top: 1px solid darkgray;
+}
+
+.upload-cv .cv-extra-information-title{
+    font-weight: 600;
+    font-style: italic;
+    color: darkslateblue;
+    margin-bottom: 15px;
+}
+
+.upload-cv #upload-cv-districts,
+.upload-cv .upload-cv-experience,
+.upload-cv .upload-cv-wage{
+    width: 47.5%;
+}
+
+/* .upload-cv #upload-cv-provinces{
+    float: left;
+    margin-right: 5%;
+} */
+
+.upload-cv #upload-cv-districts{
+    float: right;
+}
+
+.upload-cv #upload-cv-domains{
+    clear: both;
+}
+
+.upload-cv .multi-objects-input-box{
+    height: 30px;
+}
+
+.upload-cv .upload-cv-experience,
+.upload-cv .upload-cv-wage{
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-cv .upload-cv-experience{
+    float: left;
+    margin-right: 5%;
+}
+
+.upload-cv .upload-cv-button{
+    padding: 5px 0 5px 0;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.upload-cv .upload-cv-upload-button{
+    color: snow;
+    background: seagreen;
+}
+

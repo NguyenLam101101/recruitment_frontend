@@ -1,0 +1,7 @@
+.saved-recruitments-page-content{
+    padding: 80px 0;
+}
+
+.saved-recruitments-page-content .recruitment + .recruitment{
+    margin-top: 20px;
+}

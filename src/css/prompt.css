@@ -1,0 +1,21 @@
+@keyframes appear{
+    from{
+        transform: translate(-50%, -100%);
+    }
+    to{
+        transform: translate(-50%, 0);
+    }
+}
+
+.prompt{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 16px;
+    background-color: #fff;
+    width: 450px;
+    box-shadow: 0 0 3px 1px darkgray;
+    border-radius: 5px;
+    padding: 15px;
+    animation: appear 0.6s ease forwards;
+}

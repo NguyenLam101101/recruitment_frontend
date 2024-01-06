@@ -1,0 +1,175 @@
+.recruitment-management-page-content{
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recruitment-management-page .recruitment-management-page-menu{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.recruitment-management-page .recruitment-management-page-menu button + button{
+    margin-left: 15px;
+}
+
+.recruitment-management-page-menu button{
+    height: 50px;
+    border: none;
+    padding: 0 20px;
+    border-radius: 50px;
+    background-color: gainsboro;
+}
+
+.recruitment-management-page-menu button.active{
+    background-color: darkslategray;
+    color: snow;
+}
+
+.recruitment-management-page-menu button:hover{
+    background-color: darkslategray;
+    color: snow;
+}
+
+.recruitment-management-page-menu button i,
+.recruitment-management-page-menu button svg{
+    margin-right: 10px;
+}
+
+
+.recruitment-management-page .recruitment-management-page-new-recruitment{
+    background: darkslategrey;
+    color: white;
+    width: 600px;
+    margin: 0 auto 25px auto;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px 0 15px;
+    border-radius: 50px;
+}
+
+.recruitment-management-page .recruitment-management-page-new-recruitment:hover{
+    background-color: #888888;
+    cursor: pointer;
+}
+
+.recruitment-management-page .recruitment-management-page-new-recruitment svg{
+    margin-right: 15px;
+}
+
+.recruitment-management-table tbody{
+    background-color: #fff;
+}
+
+.recruitment-management-table thead{
+    background-color: var(--light-green-color);
+}
+
+.recruitment-management-table tr{
+    height: 35px;
+}
+
+.recruitment-management-table td{
+    padding: 0 10px;
+}
+
+.recruitment-management-table,
+.recruitment-management-table tr,
+.recruitment-management-table td{
+    border: 1px solid darkgray;
+    border-collapse: collapse;
+}
+
+.recruitment-management-table td.td--center{
+    text-align: center;
+}
+
+.recruitment-management-table td.td--recruitment-status.status--active{
+    color: var(--blue-color);
+}
+
+.recruitment-management-table td.td--recruitment-status.status--expired{
+    color: red;
+}
+
+.recruitment-management-table td.td--recruitment-status:hover{
+    cursor: pointer;
+    background-color: gainsboro;
+    font-weight: 600;
+}
+
+.recruitment-management-table td.td--sort:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.recruitment-management-table td.td--sort i{
+    display: none;
+}
+
+.recruitment-management-table td.td--sort.sort--desc i{
+    display: inline-block;
+}
+
+.recruitment-management-table td.td--sort.sort--asc i{
+    display: inline-block;
+    rotate: 180deg;
+}
+
+.recruitment-management-table td.td--recruitment-more-options{
+    position: relative;
+}
+
+.recruitment-management-table td.td--recruitment-more-options i:hover{
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.recruitment-management-table td.td--recruitment-more-options .recruitment-more-options{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    z-index: 1;
+}
+
+.recruitment-management-page a{
+    text-decoration: none;
+    color: var(--blue-color);
+}
+
+.recruitment-management-page a:hover{
+    font-weight: 600;
+}
+
+.recruitment-management-table .recruitment-more-options button{
+    width: 100px;
+    font-size: 11px;
+    border-bottom: 1px solid darkgray;
+}
+
+.recruitment-management-table .recruitment-more-options button:hover{
+    background-color: gainsboro;
+}
+
+.recruitment-management-table .recruitment-more-options button i{
+    margin-right: 5px;
+}
+
+.recruitment-management-recruitment-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.recruitment-management-change-recruitment-view{
+    width: fit-content;
+    padding: 0 15px;
+}
+
+.recruitment-management-change-recruitment-view:hover{
+    background-color: #DDD;
+}
+
+.recruitment-management-list .recruitment + .recruitment{
+    margin-top: 20px;
+}

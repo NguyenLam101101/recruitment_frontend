@@ -1,0 +1,186 @@
+.taskbar{
+    width: 100vw;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--dark-green-color);
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    color: white;
+    position: fixed;
+    z-index: 2;
+}
+
+.taskbar .taskbar-logo{
+    height: 50px;
+    width: 125px;
+    background-image: url("../images/verticalLogo.png");
+    background-size: cover;
+}
+
+.taskbar .taskbar-left,
+.taskbar .taskbar-right{
+    display: flex;
+}
+
+.taskbar .taskbar-right{
+    flex-grow: 1;
+    justify-content: flex-end;
+    
+}
+
+#taskbar-news,
+#taskbar-cv,
+#taskbar-mail,
+#taskbar-saved-recruitments{
+    height: 100%;
+    width: fit-content;
+    padding: 0 15px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#taskbar-news:hover,
+#taskbar-cv:hover,
+#taskbar-mail:hover,
+#taskbar-saved-recruitments:hover{
+    background: darkslategray;
+}
+
+.taskbar button i{
+    margin-right: 10px;
+}
+
+.taskbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.taskbar .taskbar-notification{
+    position: relative;
+}
+
+.taskbar .taskbar-notification > i{
+    font-size: 25px;
+}
+
+.taskbar .taskbar-notification-container{
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px lightgray;
+    top: calc(100% - 5px);
+    right: 0;
+    font-size: 13px;
+    width: 280px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.taskbar .taskbar-notification-option{
+    color: #333;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+    line-height: normal;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.taskbar .taskbar-notification-option:first-of-type{
+    border-radius: 5px 5px 0 0;
+}
+
+.taskbar .taskbar-notification-option:last-of-type{
+    border-radius: 0 0 5px 5px;
+}
+
+.taskbar .taskbar-notification-option.notRead{
+    background-color: #eee;
+}
+
+.taskbar .taskbar-notification-option i.application{
+    color: var(--light-green-color);
+}
+
+.taskbar .taskbar-notification-option i.approval{
+    color: #008C5E;
+}
+
+.taskbar .taskbar-notification-option i.replyMail{
+    color: var(--blue-color);
+}
+
+.taskbar .notification-message,
+.taskbar .notification-time{
+    height: fit-content;
+    line-height: normal;
+}
+
+.taskbar .notification-time{
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+
+.taskbar .taskbar-account{
+    margin-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.taskbar .logout-icon{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#taskbar-account-avatar{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.taskbar .taskbar-account-options{
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top:50px;
+    width: 180px;
+    background-color: white;
+    padding: 5px;
+    z-index: 1;
+}
+
+#taskbar-account-avatar:hover + .taskbar-account-options{
+    visibility: visible !important;
+}
+
+.taskbar .taskbar-account-options:hover{
+    visibility: visible !important;
+}
+
+.taskbar .taskbar-account-options button{
+    width: 100%;
+    border: none;
+    background-color: #DDDDDD;
+    color: #444444;
+    height: 40px;
+    line-height: 40px;
+}
+
+.taskbar .taskbar-account-options button i{
+    margin-right: 15px;
+    color:  #008C5E;
+    font-size: 20px;
+}
+
+.taskbar button + button{
+    margin: 0;
+}

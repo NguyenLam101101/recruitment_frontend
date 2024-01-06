@@ -1,0 +1,102 @@
+.cv-summary{
+    width: 200px;
+    height: 200px;
+    background-color: var(--white-color);
+    /* box-shadow: 0 0 2px 1px darkgray; */
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.cv-summary .cv-summary-name{
+    background-color: var(--light-green-color);
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    height: 15%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cv-summary .cv-summary-name{
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cv-summary .cv-summary-information{
+    padding: 10px;
+    color: black;
+    height: 85%;
+    position: relative;
+}
+
+/* .cv-summary .cv-summary-information:hover{
+} */
+
+.cv-summary .cv-summary-information::before{
+    content: "";
+    background-image: url("/src/images/PDFlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cv-summary .cv-summary-information.pdf::before{
+    content: "";
+    background-image: url("/src/images/PDFlogo.png");
+}
+
+.cv-summary .cv-summary-information.html::before{
+    content: "";
+    background-image: url("/src/images/htmlLogo.jpg");
+}
+
+.cv-summary .cv-summary-information.docx::before,
+.cv-summary .cv-summary-information.doc::before{
+    content: "";
+    background-image: url("/src/images/docLogo.png");
+}
+
+.cv-summary .cv-summary-information i{
+    margin-right: 10px;
+}
+
+.cv-summary .cv-summary-delete{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.cv-summary .cv-summary-delete i{
+    font-size: 15px;
+    
+}
+
+.cv-summary .cv-summary-delete i:hover{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cv-summary:hover{
+    background-color: #DDDDDD;
+}
+
+.cv-summary:hover .cv-summary-delete{
+    display: block;
+}
+
+
+

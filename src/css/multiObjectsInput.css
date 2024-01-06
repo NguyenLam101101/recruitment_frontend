@@ -1,0 +1,83 @@
+.multi-objects-input{
+    position: relative;
+}
+
+.multi-objects-input .multi-objects-input-box{
+    width: 100%;
+    height: 25px;
+    border: 1px solid #CCCCCC;
+    display: flex;
+    overflow: hidden;
+}
+
+.multi-objects-input .multi-objects-input-selected-object{
+    width: fit-content;
+    height: 70%;
+    line-height: 70%;
+    background: #C9E4D6;
+    padding: 0 5px;
+    margin: auto 5px auto 0;
+    font-weight: 400;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.multi-objects-input .delete-selected-object{
+    cursor: pointer;
+}
+
+.multi-objects-input .multi-objects-input-options {
+    width: 100%;
+    top: calc(100% + 5px);
+    left: 0;
+    height: 220px;
+    box-shadow: 0 0 2px 2px lightgray;
+    padding: 5px; 
+    position: absolute;  
+    background-color: #fff;
+    z-index: 1;
+}
+
+.multi-objects-input .multi-objects-input-list{
+    display: flex;
+    flex-direction: column;
+    background: #EEEEEE;
+    height: 100%;
+    overflow: auto;
+}
+
+.multi-objects-input .multi-objects-input-list input{
+    position: relative;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.multi-objects-input .multi-objects-input-list label{
+    padding: 4px 0 4px 0;
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.multi-objects-input .multi-objects-input-button{
+    padding: 5px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.multi-objects-input .multi-objects-input-options .multi-objects-input-select-button{
+    background: var(--middle-green-color);
+    color: white;
+}
+
+.multi-objects-input-button button + button {
+    margin-left: 10%;
+}
+
+

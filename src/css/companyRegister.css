@@ -1,0 +1,91 @@
+.company-register {
+    width: 60%;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    box-shadow: 0 0 2px 2px lightgray;
+    font-size: 17px;
+    font-family: Calibri;
+    color: #444444;
+    background-color: #C9E4D6;
+}
+
+.company-register .company-register-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.company-register form{
+    display: flex;
+    flex-direction: row;
+}
+
+.company-register .image-upload{
+    width: 100px;
+    margin-right: 20px;
+}
+
+.company-register .company-register-information{
+    width: calc(100% - 120px);
+    display: block;
+}
+
+.company-register form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.company-register form input,
+.company-register form select{
+    height: 30px;
+    border: 1px inset #67BF7F;
+    margin-bottom: 15px;
+    background: snow;
+}
+
+.company-register .image-upload-shape input{
+    margin-bottom: 0;
+}
+
+.company-register .company-register-tax-code,
+.company-register .company-register-size,
+.company-register .company-register-email,
+.company-register .company-register-website {
+    width: 47.5%;
+}
+
+.company-register .company-register-tax-code,
+.company-register .company-register-email {
+    float: left;
+    margin-right: 5%;
+}
+
+.company-register .company-register-description textarea {
+    border: 1px inset #67BF7F;
+    background-color: snow;
+    height: 100px;
+    overflow-y: scroll;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.company-register .company-register-description textarea:focus {
+    height: 150px;
+}
+
+.company-register .company-register-button {
+    width: 100px;
+    height: 35px;
+    background: darkslategray;
+    border: none;
+    font-size: 18px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 50%;
+    translate: -50% 0;
+}

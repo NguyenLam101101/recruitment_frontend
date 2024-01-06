@@ -1,0 +1,72 @@
+.employer-signup{
+    width: 100%;
+    background: none;
+    /* font-weight: 600; */
+}
+
+.employer-signup form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.employer-signup .password-register-password,
+.employer-signup .password-register-confirmed-password{
+    display: block;
+}
+
+.employer-signup form input,
+.employer-signup form select {
+    height: 30px;
+    border: none;
+    border-bottom: 1px inset #008C5E;
+    border-radius: 0;
+    margin-bottom: 15px;
+    background: none;
+}
+
+.employer-signup .employer-signup-first-name,
+.employer-signup .employer-signup-last-name,
+.employer-signup .employer-signup-phone-number,
+.employer-signup .employer-signup-email {
+    width: 47.5%;
+}
+
+.employer-signup .employer-signup-first-name,
+.employer-signup .employer-signup-phone-number{
+    float: left;
+    margin-right: 5%;
+}
+
+.employer-signup .employer-signup-phone-number{
+    display: block;
+}
+
+.employer-signup .employer-signup-phone-number-area-code{
+    float: left;
+    width: 25%;
+}
+
+.employer-signup .employer-signup-phone-number-1{
+    width: 73%;
+    margin-left: 2%;
+}
+
+.employer-signup .employer-signup-button {
+    margin-top: 5px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: #007F54;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.employer-signup a{
+    text-decoration: none;
+}
+
+.employer-signup .employer-signup-extra-services{
+    margin-top: 15px;
+    text-align: center;
+}

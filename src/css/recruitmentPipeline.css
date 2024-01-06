@@ -1,0 +1,107 @@
+.recruitment-pipeline{
+    width: max-content;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recruitment-pipeline-phases,
+.recruitment-pipeline-statuses{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.recruitment-pipeline-statuses{
+    margin-top: 20px;
+}
+
+.recruitment-pipeline-phase {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: darkgray;
+    position: relative;
+}
+
+.recruitment-pipeline-phase + .recruitment-pipeline-phase{
+    margin-left: 90px;
+}
+
+.recruitment-pipeline-phase + .recruitment-pipeline-phase::before{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 90px;
+    background-color: darkgray;
+    translate: -100% 7px;
+}
+
+.recruitment-pipeline .pipeline-phase-name{
+    position: absolute;
+    white-space:nowrap;
+    font-size: 11px;
+    top: -20px;
+    translate: calc(-50% + 7.5px) 0;
+}
+
+.recruitment-pipeline-phase.passed,
+.recruitment-pipeline-phase.passed::before{
+    background-color: #00A06B;
+}
+
+.recruitment-pipeline-phase.failed,
+.recruitment-pipeline-phase.failed::before{
+    background-color: red;
+}
+
+.recruitment-pipeline-phase.done,
+.recruitment-pipeline-phase.done::before{
+    background-color: var(--blue-color) ;
+}
+
+.recruitment-pipeline-phase.processing,
+.recruitment-pipeline-phase.processing::before{
+    background-color: var(--gold-color) ;
+}
+
+.recruitment-pipeline-status-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.recruitment-pipeline .recruitment-pipeline-status{
+    height: 9px;
+    width: 30px;
+    border-radius: 10px 100% 100% 10px;
+    background-color: darkgray;
+}
+
+.recruitment-pipeline .recruitment-pipeline-status.status--passed{
+    background-color: #00A06B;
+}
+
+.recruitment-pipeline .recruitment-pipeline-status.status--failed{
+    background-color: red;
+}
+
+.recruitment-pipeline .recruitment-pipeline-status.status--done{
+    background-color: var(--blue-color);
+}
+
+.recruitment-pipeline .recruitment-pipeline-status.status--processing{
+    background-color: var(--gold-color);
+}
+
+.recruitment-pipeline-status{
+    margin-right: 5px;
+}
+
+.recruitment-pipeline-status-name{
+    font-size: 11px;
+}

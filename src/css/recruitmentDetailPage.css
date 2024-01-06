@@ -1,0 +1,37 @@
+.recruitment-detail-page .recruitment-detail-page-content{
+    width: fit-content;
+    margin: auto;
+    padding: 80px 50px;
+}
+
+.recruitment-detail-page .recruitment-detail-page-content-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: #DDDDDD;
+    box-shadow: 0 0 1px 1px lightgray;
+}
+
+.recruitment-detail-page .recruitment-detail-page-content-button button{
+    width: fit-content;
+    height: 35px;
+    border: none;
+    padding: 0 15px;
+    min-width: 150px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.recruitment-detail-page .recruitment-detail-page-content-button button i{
+    margin-right: 10px;
+}
+
+.recruitment-detail-page .recruitment-detail-page-content-save-button{
+    background-color: #98D0B9;
+    margin-right: 50px;
+}
+
+.recruitment-detail-page .recruitment-detail-page-content-apply-button{
+    background-color: #008C5E;
+}

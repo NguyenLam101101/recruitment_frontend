@@ -1,0 +1,33 @@
+.employer-signup-page{
+    height: 100vh;
+    display: flex;
+}
+
+.employer-signup-page-1{
+    min-width: 740px;
+    width: 65%;
+    background: none;
+    font-weight: 600;
+    display: flex;
+    align-content: center;
+    margin: auto;
+}
+
+.employer-signup-page .employer-signup-page-logo{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 30%;
+    font-size: 25px;
+    border-bottom: 2px solid #008C5E;
+    color: #006241;
+    margin-right: 50px;
+}
+
+.employer-signup-page .employer-signup-page-logo img{
+    margin-bottom: 15px;
+}
+
+.employer-signup-page .employer-signup{
+    width: calc(70%-50px);
+}

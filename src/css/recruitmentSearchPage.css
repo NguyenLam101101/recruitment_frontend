@@ -1,0 +1,28 @@
+.recruitment-search-page-content{
+    padding: 80px 5%;
+}
+
+.recruitment-search-page .recruitment-search{
+    margin-bottom: 2%;
+}
+
+.recruitment-search-page .recruitment-search-results-title{
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2%;
+}
+
+.recruitment-search-page .recruitment-search-results-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 10px;
+}
+
+.recruitment-search-page .recruitment-summary{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+}

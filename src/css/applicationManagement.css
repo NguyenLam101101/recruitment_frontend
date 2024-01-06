@@ -1,0 +1,68 @@
+.application-management{
+    width: 100%;
+    min-width: 700px;
+}
+
+.application-management .mail-filter-container{
+    height: 50px;
+    text-align: right;
+    color: #666666;
+}
+
+.application-management .mail-filter-container select,
+.application-management .mail-filter-container input{
+    height: 30px;
+    border: none;
+    border-bottom: 1.5px solid darkgray;
+    background: none;
+    margin-left: 10px;
+}
+
+.application-management .mail-filter-container label+label{
+    margin-left: 2%;
+}
+
+.application-management .mail-filter-item-recruitment-container{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    max-width: 300px;
+}
+
+
+.application-management .mail-filter-item-recruitment-container input{
+    width: 100%;
+    margin-left: 0;
+    text-overflow: ellipsis;
+}
+
+
+.application-management .recruitment-name-drop-list{
+    background-color: azure;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.application-management .filter-recruitment-option{
+    border-bottom: 1px solid darkgray;
+    text-align: left;
+    padding: 5px;
+    min-height: 35px;
+    cursor: pointer;
+}
+
+.application-management .filter-recruitment-option:hover{
+    background-color: gainsboro;
+}
+
+.application-management .filter-recruitment-option.selected{
+    background-color: gainsboro;
+}
+
+.application-management .mail-filter-item-phase select{
+    max-width: 150px;
+}

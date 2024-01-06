@@ -1,0 +1,15 @@
+.employer-home-page .employer-home-page-content{
+    max-width: 1200px;
+    padding: 80px 100px;
+    margin: auto;
+    font-size: 18px;
+    color: #444444;
+    font-family: Segoe UI;
+    display: flex;
+    flex-direction: column;
+}
+
+.employer-home-page .recruitment{
+    margin-bottom: 20px;
+    width: 600px;
+}

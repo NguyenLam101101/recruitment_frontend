@@ -1,0 +1,103 @@
+.employee-signup {
+    min-width: 600px;
+}
+
+.employee-signup .employee-signup-title{
+    text-align: center;
+    color: var(--middle-green-color);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid darkgray;
+}
+
+.employee-signup .employee-signup-first-name,
+.employee-signup .employee-signup-last-name,
+.employee-signup .employee-signup-phone-number,
+.employee-signup .employee-signup-email{
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-signup div:has(input, select){
+    margin-bottom: 15px;
+}
+
+.employee-signup form input, 
+.employee-signup form select{
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid var(--middle-green-color);
+    background: none;
+}
+
+.employee-signup form label {
+    /* font-style: italic; */
+    color: #666;
+}
+
+.employee-signup .employee-signup-gender{
+    display: flex;
+    flex-direction: row;
+}
+
+.employee-signup .employee-signup-gender input{
+    height: 5%;
+    width: 5%;
+    margin-right: 10%;
+    margin-left: 2%;
+    margin-top: 7px;
+}
+
+.employee-signup .employee-signup-first-name,
+.employee-signup .employee-signup-last-name,
+.employee-signup .employee-signup-gender,
+.employee-signup .employee-signup-year-of-birth,
+.employee-signup .employee-signup-phone-number{
+    width: 47.5%;
+}
+
+.employee-signup .employee-signup-first-name,
+.employee-signup .employee-signup-gender{
+    float: left;
+    margin-right: 5%;
+}
+
+.employee-signup .employee-signup-year-of-birth{
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.employee-signup .employee-signup-year-of-birth label{
+    margin-right: 5%;
+}
+
+.employee-signup .employee-signup-year-of-birth select{
+    flex-grow: 1;
+}
+
+.employee-signup .employee-signup-email{
+    clear: both;
+}
+
+.employee-signup .employee-signup-button {
+    width: 100%;
+    /* height: 30px; */
+    background-color: var(--middle-green-color);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+.employee-signup .employee-signup-extra-services {
+    text-align: center;
+}
+
+.employee-signup .employee-signup-extra-services a {
+    text-decoration: none;
+}

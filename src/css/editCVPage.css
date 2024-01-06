@@ -1,0 +1,63 @@
+.edit-cv-page-content{
+    padding: 80px 40px;
+}
+
+.edit-cv-page-cv-name{
+    margin-bottom: 20px;
+}
+
+.edit-cv-page-cv-name label{
+    font-weight: 600;
+}
+
+.edit-cv-page-cv-name input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    width: 300px;
+    margin-left: 15px;
+}
+
+.edit-cv-page-edit-container{
+    display: flex;
+    height:fit-content;
+    width: 100%;
+}
+
+.edit-cv-page-template{
+    width: 75%;
+    margin-right: 20px;
+    /* width: 210mm; */
+}
+
+.edit-cv-page-buttons{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-cv-page-buttons button{
+    width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: darkslategray;
+    border-radius: 5px;
+    color: snow;
+}
+
+.edit-cv-page-upload-cv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(37, 37, 37, 0.6);
+    display: flex;
+}
+
+.edit-cv-page .upload-cv{
+    margin: auto;
+    max-height: 550px;
+    overflow-y: auto;
+}

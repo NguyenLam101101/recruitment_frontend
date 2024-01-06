@@ -1,0 +1,24 @@
+.address-input {
+    width: 100%;
+}
+
+.address-input .address-input-components{
+    display: flex;
+    flex-direction: row;
+}
+
+.address-input .address-input-province,
+.address-input .address-input-district {
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+}
+
+.address-input select {
+    height: 25px;
+    border: 1px solid lightgray;
+}
+
+.address-input .address-input-district{
+    margin-left: 5%;
+}

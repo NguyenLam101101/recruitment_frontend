@@ -1,0 +1,308 @@
+.recruitment{
+    margin: 0 auto 0 auto;
+    width: 650px;
+    box-shadow: 0 1px 1px 1px lightgray;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    font-family: Segoe UI;
+    font-size: 15px;
+    color: #444444;
+    background: snow;
+}
+
+.recruitment .recruitment-header{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px 10px 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.recruitment .recruitment-company-logo{
+    border: 1px solid darkgray;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+}
+
+.recruitment .recruitment-company-logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.recruitment .recruitment-header-container{
+    width: calc(100% - 75px);
+}
+
+.recruitment .recruitment-name{
+    width: 80%;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recruitment .recruitment-company-name{
+    font-size: 13px;
+}
+
+.recruitment .recruitment-time{
+    font-size: 11px;
+    color: #666;
+}
+
+.recruitment .recruitment-main-information{
+    padding: 10px 25px 10px 25px;
+    width: 100%;
+    background-color: #C9E4D6;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* justify-items: center; */
+}
+
+.recruitment .recruitment-main-information i{
+    margin-right: 10px;
+    color: lightseagreen;
+}
+
+.recruitment .recruitment-main-information-label,
+.recruitment .recruitment-detail-information-label{
+    font-weight: 600;
+}
+
+.recruitment .recruitment-detail-information-label.big-label{
+    font-size: 17px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.recruitment .recruitment-main-infomation-data{
+    padding-left: 25px;
+    margin-bottom: 0;
+}
+
+.recruitment .recruitment-main-information-position,
+.recruitment .recruitment-main-information-address,
+.recruitment .recruitment-main-information-domains,
+.recruitment .recruitment-main-information-experience,
+.recruitment .recruitment-main-information-type,
+.recruitment .recruitment-main-information-wage,
+.recruitment .recruitment-main-information-skills,
+.recruitment .recruitment-main-information-date{
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.recruitment .recruitment-detail-information{
+    padding: 10px 25px 10px 25px;
+}
+
+.recruitment .recruitment-detail-information-description,
+.recruitment .recruitment-detail-information-requirement,
+.recruitment .recruitment-detail-information-interest{
+    padding-bottom: 10px;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: pre-line;
+    text-align: justify;
+}
+
+.recruitment .recruitment-detail-information div + div{
+    border-top: 1px solid darkgray;
+    padding-top: 10px;
+}
+
+.recruitment .recruitment-more-options-container{
+    width: 5px;
+}
+
+.recruitment .recruitment-more-options-container{
+    position: relative;
+}
+
+.recruitment .recruitment-more-options-container i:hover{
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.recruitment .recruitment-more-options{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.recruitment .recruitment-more-options button{
+    width: 100px;
+    font-size: 11px;
+    border-bottom: 1px solid darkgray;
+}
+
+.recruitment .recruitment-more-options button:hover{
+    background-color: gainsboro;
+}
+
+.recruitment .recruitment-more-options button i{
+    margin-right: 5px;
+}
+
+.recruitment .recruitment-statistics{
+    padding: 10px 25px;
+    display: flex;
+    border-top: 1px solid darkgray;
+}
+
+.recruitment .recruitment-statistics > div + div{
+    margin-left: 5%;
+}
+
+.recruitment .recruitment-statistics-reaction{
+    display: flex;
+}
+
+.recruitment .statistics-reaction-icon + .statistics-reaction-icon{
+    margin-left: -10px;
+}
+
+.recruitment .recruitment-statistics .recruitment-statistics-reaction-icons,
+.recruitment .recruitment-statistics > div i{
+    margin-right: 5px;
+}
+
+.recruitment .recruitment-action{
+    padding: 10px 0;
+    margin: 0 25px;
+    border-top: 1px solid darkgray;
+    font-weight: 600;
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    /* background-color: #eee; */
+}
+
+.recruitment .recruitment-action > div{
+    cursor: pointer;
+    width: fit-content;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+
+.recruitment .recruitment-action > div i{
+    margin-right: 5px;
+}
+
+.recruitment .recruitment-action > div:hover{
+    background-color: #ddd;
+}
+
+.recruitment .recruitment-reaction{
+    position: relative;
+}
+
+.recruitment .recruitment-reaction-options{
+    border: 1px solid lightgray;
+    box-shadow: 0 0 1px 1px lightgray;
+    padding: 0 10px;
+    border-radius: 50px;
+    background-color:  #fff;
+    font-size: 30px;
+    position: absolute;
+    bottom: 100%;
+    display: none;
+}
+
+.recruitment .recruitment-reaction:hover .recruitment-reaction-options,
+.recruitment .recruitment-reaction-options:hover{
+    display: flex;
+}
+
+.recruitment .recruitment-reaction-options span:hover{
+    font-size: 40px;
+    
+}
+
+.recruitment .recruitment-comments{
+    padding: 10px 25px;
+    border-top: 1px solid darkgray;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.recruitment .comment + .comment{
+    margin-top: 10px;
+}
+
+
+.recruitment .recruitment-new-comment{
+    padding: 10px 15px;
+    /* background-color: #F2F3F5; */
+}
+
+.recruitment-new-comment-box{
+    background-color: #EEE;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.recruitment .recruitment-new-comment-input{
+    width: 100%;
+    resize: none;
+    border: none;
+    background: none;
+}
+
+.recruitment .recruitment-new-comment-input:focus{
+    outline: none;
+}
+
+.recruitment .recruitment-new-comment-services{
+    position: relative;
+}
+
+.recruitment .recruitment-new-comment-services i{
+    cursor: pointer;
+}
+
+.recruitment .recruitment-new-comment-services .send-icon{
+    rotate: 45deg;
+    position: absolute;
+    right: 0;
+}
+
+.recruitment .recruitment-new-comment-image-input{
+    position: relative;
+    cursor: pointer;
+
+}
+
+.recruitment .recruitment-new-comment-image-input input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.recruitment .recruitment-new-comment-image{
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.recruitment-comment-hidden{
+    text-align: center;
+}
+
+.recruitment-comment-hidden i:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+

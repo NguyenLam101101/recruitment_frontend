@@ -1,0 +1,145 @@
+@media screen and (min-width: 750px) {
+    .cv-management-page .cv-management-page-content{
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        padding: 80px 50px;
+        font-size: 16px;
+    }    
+    .cv-management-page .cv-management-page-content-menu{
+        width: 200px;
+        margin-right: 50px;
+    }
+    
+    .cv-management-page .cv-management-page-content-menu button {
+        height: 50px;
+        padding-left: 30px;
+        width: 100%;
+        text-align: left;
+        background-color: darkslategray;
+        color: snow;
+    }
+    
+    .cv-management-page .cv-management-page-content-menu button+button{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .cv-management-page .cv-management-page-content{
+        margin: auto;
+        padding: 80px 20px;
+    }    
+    
+    .cv-management-page .cv-management-page-content-menu button {
+        height: 80px;
+        padding-left: 30px;
+        width: fit-content;
+        padding: 0 30px;
+        text-align: left;
+        background-color: darkslategray;
+        color: snow;
+    }
+    
+    .cv-management-page .cv-management-page-content-menu button+button{
+        margin-left: 15px;
+    }
+}
+
+.cv-management-page .cv-management-page-content-menu button:hover{
+    background-color: gray;
+}
+
+.cv-management-page-content button i{
+    margin-right: 15px;
+}
+
+.cv-management-page-content-myCVs{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+@media screen and (min-width: 750px) {
+    .cv-management-page-content-upload-cv-button{
+        width: fit-content;
+        padding: 0 20px;
+        height: 40px;
+        border-radius: 30px !important;
+        background-color: var(--middle-green-color);
+        color: #fff;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .cv-management-page-content-upload-cv-button{
+        width: fit-content;
+        padding: 0 30px;
+        height: 80px;
+        margin: 50px 0;
+        border-radius: 50px !important;
+        background-color: var(--middle-green-color);
+        color: #fff;
+    }
+}
+
+
+
+.upload-cv-button button + button{
+    margin-left: 50px;
+}
+
+@media screen and (min-width: 750px) {
+    .cv-management-page .cv-management-page-content-cvs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+        justify-items: left;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .cv-management-page .cv-management-page-content-cvs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        justify-items: left;
+    }
+
+    .cv-management-page .cv-summary{
+        height: 500px;
+    }
+}
+
+
+.cv-management-page .cv-summary{
+    width: 100%;
+    overflow: hidden;
+}
+
+.cv-management-page .cv-management-page-upload-cv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(37, 37, 37, 0.6);
+    display: flex;
+}
+
+.cv-management-page .upload-cv{
+    margin: auto;
+    max-height: 550px;
+}
+
+.cv-management-page-cv-template{
+    flex-grow: 1;
+}
+
+.cv-template-preview{
+    width: 100%;
+    /* height: calc(var(--width) / 210 * 297); */
+}

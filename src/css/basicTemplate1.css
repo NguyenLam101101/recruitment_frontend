@@ -1,0 +1,194 @@
+/* :root{
+    --width: 200mm;
+}
+
+.cv-template{
+    width: var(--width);
+    height: calc(var(--width) / 210 * 297);
+    border: 1px solid black;
+    padding: calc(var(--width)/20);
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.cv-template-avatar{
+    width: calc(0.2 * var(--width));
+    height: calc(0.2 * var(--width));
+    position: relative;
+}
+
+.cv-template-avatar label{
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.cv-template-avatar img{
+    width: 100%;
+    height: 100%;
+}
+
+.cv-template-avatar-edit-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(37, 37, 37, 0.6);
+    display: none;
+}
+
+.cv-template-avatar-edit{
+    margin: auto;
+    width: fit-content;
+    max-height: 500px;
+}
+
+.cv-template-avatar-edit .cropper-container.cropper-bg{
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.cv-template-avatar-edit-container img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.cv-template-avatar-edit-button{
+    padding: 5px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.cv-template-avatar-edit-button button + button{
+    margin-left: 20px;
+}
+
+.cv-template-introduction{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #333;
+}
+
+.cv-template-personal-information{
+    background: var(--middle-green-color);
+    width: 80%;
+    color: white;
+}
+
+.cv-template-personal-information-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.cv-template-employee-name{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: calc(var(--width)/35);
+}
+
+.cv-template-personal-information-item :first-child{
+    width: 34%;
+    padding-left: 12%;
+    font-weight: bold;
+}
+
+.cv-template-body-part{
+    padding: 10px 0;
+    border-top: 1px solid #666;
+}
+
+.cv-template-body-title{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cv-template-body-item{
+    padding: 5px 0;
+    position: relative;
+}
+
+.cv-template-body-item:hover{
+    border: 1px solid darkgray;
+}
+
+.cv-template-body-item:hover .cv-template-edit-button{
+    display: flex !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cv-template-education-school-name, .cv-template-experience-work-place, .cv-template-achievement-name{
+    float: left;
+    width: 75%;
+    max-width: 75%;
+}
+
+#cv-template-skill .cv-template-body-item{
+    display: flex;
+    flex-direction: row;
+}
+
+#cv-template-skill .cv-template-skill-name{
+    width: 30%;
+    max-width: 30%;
+}
+
+#cv-template-skill .cv-template-skill-details{
+    width: 70%;
+    max-width: 70%;
+}
+
+.cv-template-education-school-name, .cv-template-experience-work-place,
+.cv-template-achievement-name, .cv-template-skill-name{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cv-template-experience-position{
+    font-style: italic;
+}
+
+
+.cv-template-education-date, .cv-template-experience-date, .cv-template-achievement-time{
+    width: 25%; 
+    max-width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+
+
+.cv-template-edit-button {
+    display: flex;
+    flex-direction: row;
+    position: absolute; 
+    bottom: 100%;
+}
+
+.cv-template-edit-button button{
+    background: var(--dark-green-color);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin-right: 5px;
+    border-radius: 3px;
+    color: white;
+} */

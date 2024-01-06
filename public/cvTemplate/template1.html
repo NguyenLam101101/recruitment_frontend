@@ -1,0 +1,565 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.12/dist/cropper.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/cropperjs"></script>
+</head>
+<style>
+    :root {
+        --width: 210mm;
+        --light-green-color: #98D0B9;
+        --dark-green-color: #008489;
+        --middle-green-color: #007F54;
+        --blue-color: #426EB4;
+        --white-color: #fff;
+        --gold-color: gold;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .cv-template {
+        width: var(--width);
+        height: calc(var(--width) / 210 * 297);
+        border: 1px solid black;
+        padding: calc(var(--width)/20);
+        overflow: hidden;
+        font-size: 12pt;
+    }
+
+    .cv-template-avatar {
+        width: calc(0.2 * var(--width));
+        height: calc(0.2 * var(--width));
+        position: relative;
+    }
+
+    .cv-template-avatar label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    .cv-template-avatar img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cv-template-avatar-edit-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(37, 37, 37, 0.6);
+        display: none;
+    }
+
+    .cv-template-avatar-edit {
+        margin: auto;
+        width: fit-content;
+        max-height: 500px;
+        /* display: flex; */
+    }
+
+    .cv-template-avatar-edit .cropper-container.cropper-bg {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .cv-template-avatar-edit-container img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .cv-template-avatar-edit-button {
+        padding: 5px 0;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .cv-template-avatar-edit-button button+button {
+        margin-left: 20px;
+    }
+
+    .cv-template-introduction {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 10px;
+        border-bottom: 1.5px solid #333;
+    }
+
+    .cv-template-personal-information {
+        background: var(--middle-green-color);
+        width: 80%;
+        color: white;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cv-template-personal-information-item {
+        display: flex;
+    }
+
+    .cv-template-personal-information-item+.cv-template-personal-information-item {
+        margin-top: 2px;
+    }
+
+    .cv-template-employee-name {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        font-size: 15pt;
+    }
+
+    .cv-template-personal-information-item :first-child {
+        width: 50%;
+        padding-left: 30%;
+        padding-right: 2.5%;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .cv-template-personal-information-item :nth-child(2) {
+        width: 50%;
+        padding-left: 2.5%
+    }
+
+    .cv-template-body-part {
+        padding: 10px 0;
+        border-top: 1px solid #666;
+    }
+
+    .cv-template-body-title {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .cv-template-body-item {
+        padding: 5px 0;
+        position: relative;
+    }
+
+    .cv-template-body-item:hover {
+        border: 1px solid darkgray;
+    }
+
+    .cv-template-body-item:hover .cv-template-edit-button {
+        display: flex !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .cv-template-education-school-name,
+    .cv-template-experience-work-place,
+    .cv-template-achievement-name {
+        float: left;
+        width: 75%;
+        max-width: 75%;
+    }
+
+    #cv-template-skill .cv-template-body-item {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cv-template-skill .cv-template-skill-name {
+        width: 30%;
+        max-width: 30%;
+    }
+
+    #cv-template-skill .cv-template-skill-details {
+        width: 70%;
+        max-width: 70%;
+    }
+
+    .cv-template-education-school-name,
+    .cv-template-experience-work-place,
+    .cv-template-achievement-name,
+    .cv-template-skill-name {
+        font-weight: bold;
+    }
+
+    .cv-template-experience-position {
+        font-style: italic;
+    }
+
+
+    .cv-template-education-date,
+    .cv-template-experience-date,
+    .cv-template-achievement-time {
+        width: 25%;
+        max-width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    .cv-template-edit-button {
+        display: none;
+        flex-direction: row;
+        position: absolute;
+        bottom: 100%;
+    }
+
+    .cv-template-edit-button button {
+        background: var(--dark-green-color);
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+        margin-right: 5px;
+        border-radius: 3px;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="cv-template">
+        <div class="cv-template-introduction">
+            <div class="cv-template-avatar">
+                <label class="cv-template-avatar-input">
+                    <input type="file" onclick="willSelectAvatar(event)" onchange="selectAvatar(event)" />
+                </label>
+                <img id="cv-template-avatar-image" src=""></img>
+                <div class="cv-template-avatar-edit-container">
+                    <div class="cv-template-avatar-edit">
+                        <img id="cv-template-avatar-temp-image" src=""></img>
+                        <div class="cv-template-avatar-edit-button">
+                            <button onclick="saveAvatar(event)">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-template-personal-information">
+                <div class="cv-template-employee-name" contenteditable="true">NGUYỄN VĂN A</div>
+                <div class="cv-template-personal-information-item">
+                    <div>Giới tính:</div>
+                    <div contenteditable="true">male</div>
+                </div>
+                <div class="cv-template-personal-information-item">
+                    <div>Ngày sinh:</div>
+                    <div contenteditable="true">1/1/2000</div>
+                </div>
+                <div class="cv-template-personal-information-item">
+                    <div>Địa chỉ:</div>
+                    <div contenteditable="true">address/city</div>
+                </div>
+                <div class="cv-template-personal-information-item">
+                    <div>Điện thoại:</div>
+                    <div contenteditable="true">123456789</div>
+                </div>
+                <div class="cv-template-personal-information-item">
+                    <div>Email:</div>
+                    <div contenteditable="true">example@gmail.com</div>
+                </div>
+                <div class="cv-template-personal-information-item">
+                    <div>Link:</div>
+                    <div contenteditable="true">facebook/linkedin</div>
+                </div>
+            </div>
+        </div>
+        <div class="cv-template-body">
+            <div id="cv-template-career-goal" class="cv-template-body-part">
+                <div class="cv-template-body-title" contenteditable="true">MỤC TIÊU NGHỀ NGHIỆP</div>
+                <div class="cv-template-body-items">
+                    <div class="cv-template-career-goal-details" contenteditable="true">mô tả</div>
+                </div>
+            </div>
+            <div id="cv-template-education" class="cv-template-body-part">
+                <div class="cv-template-body-title" contenteditable="true">HỌC VẤN</div>
+                <div class="cv-template-body-items" id="body-items--education">
+                    <div class="cv-template-body-item">
+                        <div class="cv-template-edit-button">
+                            <button class="cv-template-edit-button-add">&#43;</button>
+                            <button class="cv-template-edit-button-delete">&#8722;</button>
+                            <button class="cv-template-edit-button-move-down">&#8744;</button>
+                            <button class="cv-template-edit-button-move-up">&#8743;</button>
+                        </div>
+                        <div class="cv-template-education-school-name" contenteditable="true">trường</div>
+                        <div class="cv-template-education-date">
+                            <div class="cv-template-education-start-date" contenteditable="true">từ ngày</div>
+                            &minus;
+                            <div class="cv-template-education-end-date" contenteditable="true">đến ngày</div>
+                        </div>
+                        <div class="cv-template-education-details" contenteditable="true">mô tả</div>
+                    </div>
+                </div>
+            </div>
+            <div id="cv-template-skill" class="cv-template-body-part">
+                <div class="cv-template-body-title" contenteditable="true">KỸ NĂNG</div>
+                <div class="cv-template-body-items" id="body-items--skill">
+                    <div class="cv-template-body-item">
+                        <div class="cv-template-edit-button">
+                            <button class="cv-template-edit-button-add">&#43;</button>
+                            <button class="cv-template-edit-button-delete">&#8722;</button>
+                            <button class="cv-template-edit-button-move-down">&#8744;</button>
+                            <button class="cv-template-edit-button-move-up">&#8743;</button>
+                        </div>
+                        <div class="cv-template-skill-name" contenteditable="true">kỹ năng</div>
+                        <div class="cv-template-skill-details" contenteditable="true">mô tả</div>
+                    </div>
+                </div>
+            </div>
+            <div id="cv-template-experience" class="cv-template-body-part">
+                <div class="cv-template-body-title" contenteditable="true">KINH NGHIỆM</div>
+                <div class="cv-template-body-items" id="body-items--experience">
+                    <div class="cv-template-body-item">
+                        <div class="cv-template-edit-button">
+                            <button class="cv-template-edit-button-add">&#43;</button>
+                            <button class="cv-template-edit-button-delete">&#8722;</button>
+                            <button class="cv-template-edit-button-move-down">&#8744;</button>
+                            <button class="cv-template-edit-button-move-up">&#8743;</button>
+                        </div>
+                        <div class="cv-template-experience-work-place" contenteditable="true">nơi làm việc</div>
+                        <div class="cv-template-experience-date">
+                            <div class="cv-template-experience-start-date" contenteditable="true">từ ngày</div>
+                            &minus;
+                            <div class="cv-template-experience-end-date" contenteditable="true">đến ngày</div>
+                        </div>
+                        <div class="cv-template-experience-position" contenteditable="true">vị trí</div>
+                        <div class="cv-template-experience-details" contenteditable="true">mô tả</div>
+                    </div>
+                </div>
+            </div>
+            <div id="cv-template-achievement" class="cv-template-body-part">
+                <div class="cv-template-body-title" contenteditable="true">GIẢI THƯỞNG</div>
+                <div class="cv-template-body-items" id="body-items--achievement">
+                    <div class="cv-template-body-item">
+                        <div class="cv-template-edit-button">
+                            <button class="cv-template-edit-button-add">&#43;</button>
+                            <button class="cv-template-edit-button-delete">&#8722;</button>
+                            <button class="cv-template-edit-button-move-down">&#8744;</button>
+                            <button class="cv-template-edit-button-move-up">&#8743;</button>
+                        </div>
+                        <div class="cv-template-achievement-name" contenteditable="true">giải thưởng</div>
+                        <div class="cv-template-achievement-time" contenteditable="true">thời gian</div>
+                        <div class="cv-template-achievement-details" contenteditable="true">mô tả</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let cropper;
+
+    const skillItem =
+        '<div class="cv-template-body-item">' +
+        '<div class="cv-template-edit-button">' +
+        '<button class="cv-template-edit-button-add">&#43;</button>' +
+        '<button class="cv-template-edit-button-delete">&#8722;</button>' +
+        '<button class="cv-template-edit-button-move-down">&#8744;</button>' +
+        '<button class="cv-template-edit-button-move-up">&#8743;</button>' +
+        '</div>' +
+        '<div class="cv-template-skill-name" contenteditable="true">kỹ năng</div>' +
+        '<div class="cv-template-skill-details" contenteditable="true">mô tả</div>' +
+        '</div>'
+
+    const educationItem =
+        '<div class="cv-template-body-item">' +
+        '<div class="cv-template-edit-button">' +
+        '<button class="cv-template-edit-button-add">&#43;</button>' +
+        '<button class="cv-template-edit-button-delete">&#8722;</button>' +
+        '<button class="cv-template-edit-button-move-down">&#8744;</button>' +
+        '<button class="cv-template-edit-button-move-up">&#8743;</button>' +
+        '</div>' +
+        '<div class="cv-template-education-school-name" contenteditable="true">trường</div>' +
+        '<div class="cv-template-education-date">' +
+        '<div class="cv-template-education-start-date" contenteditable="true">từ ngày</div>' +
+        '&minus;' +
+        '<div class="cv-template-education-end-date" contenteditable="true">đến ngày</div>' +
+        '</div>' +
+        '<div class="cv-template-education-details" contenteditable="true">mô tả</div>' +
+        '</div>';
+
+    const experienceItem =
+        '<div class="cv-template-body-item">' +
+        '<div class="cv-template-edit-button">' +
+        '<button class="cv-template-edit-button-add">&#43;</button>' +
+        '<button class="cv-template-edit-button-delete">&#8722;</button>' +
+        '<button class="cv-template-edit-button-move-down">&#8744;</button>' +
+        '<button class="cv-template-edit-button-move-up">&#8743;</button>' +
+        '</div>' +
+        '<div class="cv-template-experience-work-place" contenteditable="true">nơi làm việc</div>' +
+        '<div class="cv-template-experience-date">' +
+        '<div class="cv-template-experience-start-date" contenteditable="true">từ ngày</div>' +
+        '&minus;' +
+        '<div class="cv-template-experience-end-date" contenteditable="true">đến ngày</div>' +
+        '</div>' +
+        '<div class="cv-template-experience-position" contenteditable="true">vị trí</div>' +
+        '<div class="cv-template-experience-details" contenteditable="true">mô tả</div>' +
+        '</div>';
+
+    const achievementItem =
+        '<div class="cv-template-body-item">' +
+        '<div class="cv-template-edit-button">' +
+        '<button class="cv-template-edit-button-add">&#43;</button>' +
+        '<button class="cv-template-edit-button-delete">&#8722;</button>' +
+        '<button class="cv-template-edit-button-move-down">&#8744;</button>' +
+        '<button class="cv-template-edit-button-move-up">&#8743;</button>' +
+        '</div>' +
+        '<div class="cv-template-achievement-name" contenteditable="true">giải thưởng</div>' +
+        '<div class="cv-template-achievement-time" contenteditable="true">thời gian</div>' +
+        '<div class="cv-template-achievement-details" contenteditable="true">mô tả</div>' +
+        '</div>';
+
+
+    window.onload = () => {
+        updateAddItemEvent();
+        updateAddAndDeleteItemEvent();
+    }
+
+    function addItem(element) {
+        let newItem = document.createElement("div");
+        switch (element.parentElement.parentElement.id) {
+            case ("cv-template-education"):
+                newItem.innerHTML = educationItem;
+                break;
+            case ("cv-template-skill"):
+                newItem.innerHTML = skillItem;
+                break;
+            case ("cv-template-experience"):
+                newItem.innerHTML = experienceItem;
+                break;
+            case ("cv-template-achievement"):
+                newItem.innerHTML = achievementItem;
+                break;
+        }
+        newItem = newItem.children[0];
+        element.after(newItem);
+        updateAddItemEvent();
+        updateAddAndDeleteItemEvent();
+    }
+
+    function deleteItem(element) {
+        element.remove();
+        updateAddAndDeleteItemEvent();
+    }
+
+    function moveUpItem(element) {
+        if (element.previousSibling !== null) {
+            element.after(element.previousSibling);
+        }
+    }
+
+    function moveDownItem(element) {
+        if (element.nextSibling !== null) {
+            element.before(element.nextSibling);
+        }
+    }
+
+    function updateAddAndDeleteItemEvent() {
+        Array.from(document.getElementsByClassName("cv-template-body-items")).forEach(
+            element => {
+                if (element.children.length === 1) {
+                    let deleteButtons = element.getElementsByClassName("cv-template-edit-button-delete");
+                    if (deleteButtons.length > 0) {
+                        deleteButtons[0].style.display = 'none';
+                    }
+                }
+                else {
+                    let deleteButtons = element.getElementsByClassName("cv-template-edit-button-delete");
+                    if (deleteButtons.length > 0) {
+                        deleteButtons[0].style.display = '';
+                    }
+                }
+            }
+        );
+    }
+
+    function updateAddItemEvent() {
+        Array.from(document.getElementsByClassName("cv-template-edit-button-add")).forEach(
+            element => {
+                element.onclick = () => addItem(element.parentElement.parentElement);
+            });
+        Array.from(document.getElementsByClassName("cv-template-edit-button-delete")).forEach(
+            element => {
+                element.onclick = () => deleteItem(element.parentElement.parentElement);
+            });
+        Array.from(document.getElementsByClassName("cv-template-edit-button-move-up")).forEach(
+            element => {
+                element.onclick = () => moveUpItem(element.parentElement.parentElement);
+            });
+        Array.from(document.getElementsByClassName("cv-template-edit-button-move-down")).forEach(
+            element => {
+                element.onclick = () => moveDownItem(element.parentElement.parentElement);
+            });
+    }
+
+    function willSelectAvatar(event) {
+        event.target.value = '';
+        document.getElementById("cv-template-avatar-image").src = "";
+        document.getElementById("cv-template-avatar-temp-image").src = "";
+        document.getElementsByClassName("cv-template-avatar-edit-container")[0].style.display = "none";
+    }
+
+    function selectAvatar(event) {
+        if (event.target.files === null) {
+            return;
+        }
+        let avatarFile = event.currentTarget.files[0];
+        let fileReader = new FileReader();
+        fileReader.onload = () => {
+            document.getElementById("cv-template-avatar-temp-image").src = fileReader.result;
+        }
+        fileReader.readAsDataURL(avatarFile);
+
+        //reset cropper
+        if (cropper) {
+            cropper.destroy();
+            cropper = null;
+        }
+        let element = document.getElementById("cv-template-avatar-temp-image");
+        element.onload = () => {
+            cropper = new Cropper(element, { aspectRatio: 1 });
+        }
+
+        document.getElementsByClassName("cv-template-avatar-edit-container")[0].style.display = "flex";
+    }
+
+    function saveAvatar(event) {
+        let croppedAvatar = cropper.getCroppedCanvas().toDataURL('image/jpeg');
+        document.getElementById("cv-template-avatar-image").src = croppedAvatar;
+        document.getElementsByClassName("cv-template-avatar-edit-container")[0].style.display = "none";
+        cropper.destroy();
+        cropper = null;
+    }
+
+
+    function componentDidMount() {
+        updateAddItemEvent();
+        updateAddAndDeleteItemEvent();
+        let element = document.getElementById("cv-template-avatar-temp-image");
+        element.onload = () => {
+            cropper = new Cropper(element, { aspectRatio: 1 })
+        }
+    }
+</script>
+
+</html>

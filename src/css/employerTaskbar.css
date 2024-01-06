@@ -1,0 +1,102 @@
+.employer-taskbar{
+    width: 100vw;
+    height: 50px;
+    line-height: 50px;
+    background-color: #008489;
+    display: flex;
+    font-family: Segoe UI;
+    font-size: 18px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.employer-taskbar .employer-taskbar-left,
+.employer-taskbar .employer-taskbar-right{
+    display: flex;
+}
+
+.employer-taskbar .employer-taskbar-right{
+    flex-grow: 1;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.employer-taskbar a{
+    text-decoration: none;
+}
+
+.employer-taskbar .employer-taskbar-logo{
+    height: 50px;
+    width: 125px;
+    background-image: url("../images/verticalLogo.png");
+    background-size: cover;
+}
+
+.employer-taskbar button i{
+    margin-right: 10px;
+}
+
+.employer-taskbar button{
+    height: 100%;
+    width: fit-content;
+    padding: 0 20px 0 20px;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employer-taskbar button:hover{
+    background-color: darkslategray;
+}
+
+.employer-taskbar .not-read-mail-number{
+    background-color: red;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.employer-taskbar .employer-taskbar-account{
+    margin-right: 15px;
+    display: flex;
+    position: relative;
+}
+
+#employer-taskbar-account-avatar{
+    font-size: 30px;
+    margin-right: 10px; 
+}
+
+.employer-taskbar .logout-icon{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.employer-taskbar .logout-icon:hover{
+    opacity: 0.7;
+}
+
+.employer-taskbar .task-bar-account-options{
+    position: absolute;
+    right: 0;
+    top:50px;
+    width: 200px;
+    background-color: white;
+    padding: 5px;
+}
+
+.employer-taskbar .task-bar-account-options button{
+    width: 100%;
+    background-color: #DDDDDD;
+    margin-bottom: 5px;
+    color: #444444;
+}

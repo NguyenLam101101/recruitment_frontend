@@ -1,0 +1,298 @@
+.application-detail-page{
+    display: flex;
+    justify-content: stretch;
+    height: max-content;
+}
+
+.application-detail-page .application-detail-main-information{
+    width: 20%;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: var(--dark-green-color);
+}
+
+.application-detail-page .application-detail-page-cv-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(37, 37, 37, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.application-detail-page .application-detail-page-cv-close{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.application-detail-page .application-detail-page-cv-close i{
+    cursor: pointer;
+}
+
+.application-detail-page .application-detail-page-cv-container iframe{
+    height: 87%;
+    width: 70%;
+}
+
+.application-detail-page .application-detail-page-recruitment{
+    margin-top: 15px;
+}
+
+.application-detail-page .cv-summary {
+    width: 100%;
+}
+
+
+.application-detail-page .recruitment-summary {
+    width: 100%;
+    height: 200px;
+    min-height: 150px;
+    padding: 10px;
+}
+
+.application-detail-page .recruitment-summary .recruitment-summary-information{
+    grid-template-columns: 1fr;
+    font-size: 11px;
+}
+
+.application-detail-page .application-detail-flow{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.application-detail-page .recruitment-pipeline{
+    margin-top: 20px;
+}
+
+
+.application-detail-page .current-phase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid darkgray;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.application-detail-page .current-mail{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.application-detail-page .mail-detail{
+    width: 100%;
+}
+
+.application-detail-page .reply-button{
+    font-size: 30px;
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 50px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.application-detail-page .reply-button:hover{
+    opacity: 1;
+}
+
+.application-detail-page .reply-mail-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(37, 37, 37, 0.6);
+    display: flex;
+    z-index: 1;
+}
+
+.application-detail-page .reply-mail{
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #fff;
+    padding: 10px;
+}
+
+.application-detail-page .reply-mail .close-button{
+    text-align: right;
+    padding-bottom: 5px;
+    border-bottom: 1px solid darkgray;
+}
+
+.application-detail-page .reply-mail .close-button i{
+    cursor: pointer;
+}
+
+.application-detail-page #reply-body{
+    height: 150px;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid darkgray;
+}
+
+.application-detail-page #reply-body:focus{
+    outline: none;
+}
+
+.application-detail-page .reply-services{
+    margin-top: 10px;
+    display: flex;
+}
+
+.application-detail-page #reply-attachments{
+    width: fit-content;
+}
+
+.application-detail-page svg{
+    rotate: 45deg;
+    scale: 1.5;
+    margin: 7px 10px 0 auto;
+    cursor: pointer;
+}
+
+.application-detail-page .new-approval-mail{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(37, 37, 37, 0.6);
+    display: flex;
+    z-index: 1;
+}
+
+.application-detail-page .new-approval-mail > div{
+    margin: auto;
+}
+
+.application-detail-page .current-phase .mail-detail-main,
+.application-detail-page .current-phase .mail-detail-response-item{
+    background-color: seashell;
+    border: 1px solid lightgray;
+}
+
+.application-detail-page .current-phase-buttons{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.application-detail-page .current-phase-buttons button + button{
+    margin-left: 20px;
+}
+
+.application-detail-page .current-phase-buttons button{
+    background-color: var(--light-green-color);
+}
+
+.application-detail-page .current-phase-buttons button:hover{
+    opacity: 0.6;
+}
+
+.application-detail-page .current-phase-buttons button.reject{
+    background-color: #E54646;
+    color: #fff;
+}
+
+.application-detail-page .current-phase-buttons button.done{
+    background-color: var(--blue-color);
+    color: #fff;
+}
+
+.application-detail-page .application-detail-page-history{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.application-detail-page .application-detail-page-expand{
+    font-size: 25px;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+ }
+
+.application-detail-page .application-history{
+    margin-left: 150px;
+    width: 100%;
+}
+
+.application-detail-page .application-history ul{
+    list-style: none;
+    padding: 0;
+}
+
+.application-detail-page .application-history ul li{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.application-detail-page .application-history .mark{
+    background-color: var(--dark-green-color);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: -36.5px;
+}
+
+.application-detail-page .application-history .mark.status--passed{
+    background-color: #00A06B;
+}
+
+.application-detail-page .application-history .mark.status--processing{
+    background-color: var(--gold-color);
+}
+
+.application-detail-page .application-history .mark.status--done{
+    background-color: var(--blue-color);
+}
+
+.application-detail-page .application-history .mark.status--failed{
+    background-color: red;
+}
+
+.application-detail-page .application-history ul li::before{
+    content: "";
+    position: absolute;
+    left: -30px;
+    background-color: darkgray;
+    display: inline-block;
+    width: 2px;
+    height: calc(100% + 25px);
+}
+
+
+.application-detail-page .application-history .phase-note{
+    text-align: right;
+    position: absolute;
+    left: -50px;
+    translate: -100% 0;
+    font-size: 12px;
+}
+
+.application-detail-page .application-detail-page-title{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.application-detail-page .application-detail-page-title.white-title{
+    color: whitesmoke;
+}

@@ -1,0 +1,78 @@
+.cv-search {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px 1px lightgray;
+    border-radius: 5px;
+    font-family: Segoe UI;
+    color: #555555;
+    background-color: white;
+    font-size: 15px;
+}
+
+.cv-search .cv-search-title {
+    height: 40px;
+    padding: 5px 20px 5px 20px;
+    background-color: darkslategray;
+    font-size: 18px;
+    font-weight: 600;
+    color:  white;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid darkgray;
+}
+
+.cv-search .cv-search-box {
+    padding: 5px 20px 10px 20px;
+    position: relative;
+    display: flex;
+}
+
+.cv-search .cv-search-box > div + div {
+    margin-left: 20px;
+}
+
+.cv-search select,
+.cv-search input,
+.cv-search .multi-objects-input .multi-objects-input-box {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: snow;
+} 
+
+.cv-search #cv-search-experience,
+.cv-search .multi-objects-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-search #cv-search-experience{
+    flex: 1;
+}
+
+.cv-search .multi-objects-input{
+    flex: 3;
+}
+
+.cv-search .cv-search-button{
+    padding: 5px 20px 5px 20px;
+    background-color: lavenderblush;
+    text-align: right;
+}
+
+.cv-search .cv-search-button button{
+    width: fit-content;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #008C5E;
+    color: white;
+    border: none;
+}
+
+.cv-search button i{
+    margin-right: 5px;
+}
+
+

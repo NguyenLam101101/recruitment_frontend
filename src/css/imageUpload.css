@@ -1,0 +1,127 @@
+.image-upload{
+    width: fit-content;
+    height: fit-content;
+}
+
+.image-upload .image-upload-image,
+.image-upload .image-upload-preview{
+    border: 1.5px inset #007F54;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+}
+
+.image-upload .image-upload-image::before,
+.image-upload .image-upload-preview::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: gray;
+    opacity: 0.4;
+    width: 0;
+    height: 0;
+}
+
+.image-upload .image-upload-image:hover::before,
+.image-upload .image-upload-preview:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+.image-upload .image-upload-image i,
+.image-upload .image-upload-preview i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0.2;
+}
+
+.image-upload .image-upload-image:hover i,
+.image-upload .image-upload-preview:hover i{
+    opacity: 1;
+}
+
+.image-upload .image-upload-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(37, 37, 37, 0.5);
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+.image-upload .image-upload-edit-1 {
+    margin: 100px auto auto auto;
+    background-color: white;
+    width: fit-content;
+    min-width: 500px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-upload .image-upload-shape {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid darkgray;
+    background-color: lightpink;
+    margin-bottom: 15px;
+}
+
+.image-upload .image-upload-shape label {
+    width: 33.3%;
+    text-align: center;
+    height: fit-content;
+}
+
+.image-upload .image-upload-shape input{
+    height: 25px;
+    width: 80px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.image-upload .image-upload-preview input{
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.image-upload .image-upload-preview-canvas{
+    width: 100%;
+}
+
+.image-upload .image-upload-edit-buttons{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-upload .image-upload-edit-buttons button{
+    width: 70px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+}
+
+.image-upload .image-upload-edit-save-button{
+    background-color: sienna;
+    color: white;
+    margin-right: 50px;
+}

@@ -1,0 +1,43 @@
+.select-cv{
+    background-color: snow;
+    overflow: hidden;
+    height: 100%;
+}
+
+.select-cv .select-cv-list{
+    overflow-y: auto;
+    height: 455px;
+    padding: 10px;
+}
+
+.select-cv .cv-summary{
+    margin-bottom: 10px;
+}
+
+.select-cv .cv-summary:hover{
+    outline: darkslategray solid 2px;
+    cursor: pointer;
+}
+
+.select-cv .cv-summary .cv-summary-name{
+    pointer-events: none;
+}
+
+.select-cv .select-cv-button{
+    background: lightgray;
+    padding: 5px 0 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.select-cv .select-cv-button button{
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+}
+
+.select-cv .select-cv-select-button{
+    color: white;
+    background: #426EB4;
+}

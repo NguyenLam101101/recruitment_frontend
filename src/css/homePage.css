@@ -1,0 +1,96 @@
+.home-page .home-page-content {
+    margin: auto;
+    font-family: Segoe UI;
+    color: #444444;
+}
+
+@media screen and (min-width: 750px) {
+    .home-page .home-page-content {
+        padding: 80px 100px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .home-page .home-page-content {
+        padding: 20px;
+    }
+}
+
+.home-page .home-page-new-recruitments {
+    margin-top: 20px;
+}
+
+.home-page .home-page-new-recruitments .recruitment + .recruitment{
+    margin-top: 20px;
+}
+/* 
+.home-page .home-page-new-recruitments-title img {
+    width: 100%;
+}
+
+.home-page .home-page-new-recruitments-content {
+    display: flex;
+    align-items: stretch;
+    padding: 20px 0;
+}
+
+.home-page .home-page-new-recruitments-container {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.home-page .home-page-new-recruitments-slider {
+    display: flex;
+    justify-items: stretch;
+    transition: transform 0.4s ease-in-out;
+}
+
+@media screen and (min-width: 750px) {
+    .home-page .home-page-new-recruitments-items {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .home-page .home-page-new-recruitments-items {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+.home-page .home-page-new-recruitments-pre-page,
+.home-page .home-page-new-recruitments-next-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.home-page .home-page-new-recruitments-pre-page:hover,
+.home-page .home-page-new-recruitments-next-page:hover {
+    background-color: #ddd;
+}
+
+.home-page .home-page-new-recruitments-page {
+    text-align: center;
+}
+
+.home-page .recruitment-search-button button {
+    width: fit-content;
+    padding: 0 10px;
+}
+
+.home-page .recruitment-summary {
+    width: 100%;
+} */
